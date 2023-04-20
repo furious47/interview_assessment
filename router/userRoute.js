@@ -14,10 +14,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 // const router = express.Router()
-const { register, login } = require('../controller/user')
+const { register, login, verification } = require('../controller/user')
 
 
 router.post('/register', upload.single('file'), register)
 router.post('/login', login);
+router.post('/verify', verification)
 
 module.exports = router;

@@ -26,6 +26,13 @@ const User = sequelize.define('user', {
   },
   img: {
     type: DataTypes.STRING,
+  },
+  otp: {
+    type: DataTypes.STRING,
+  },
+  isVerified: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
   }
 })
 
